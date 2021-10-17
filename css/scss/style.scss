@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: lightblue
+}
+
+@import 'couleur' ;
+@import 'taille' ;
+
+h2{
+    color:$couleur1;
+}
+h3{
+    color: $couleur2;
+}
+p{
+    color: $couleur3;
+}
+
+button{
+    color: $couleur1;
+}
+
+.actus{
+    background: $couleur_fond1;
+    width:100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    h2{
+        border: solid $couleur1 2px;
+    }
+    .actu{
+        background: $couleur_fond2;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 10px 0;
+        button{
+            display: block;
+            margin: 0 auto;
+        }
+        &:before{
+            content: "AVANt";
+        }
+        &:after{
+            content: "APRES";
+        }
+
+        @media screen and (min-width:760px) {
+            background: red;
+        }
+    }
+
+    
+    @media screen and (min-width:760px) {
+        width: 700px;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 1000px;
+    }
+
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    margin: 50px 0;
+}
+
+.grille{
+    max-width: 1300px;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    justify-content: center;
+    grid-gap: 10px;
+}
+    
+.grid-item{
+    width: 400px;
+    height: 200px;
+    background: #333;
+}
